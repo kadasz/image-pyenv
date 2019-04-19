@@ -26,5 +26,5 @@ RUN touch /etc/service/cron/down
 # remove sshd service
 RUN rm -rf /etc/service/sshd
 
-WORKDIR $APP_HOME
+WORKDIR /opt
 CMD ["/sbin/my_init"]
