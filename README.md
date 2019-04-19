@@ -1,3 +1,4 @@
-# image-python
-Python docker image based on baseimage-docker
+# image-pyenv
+Prepare python development environment using Docker
+
 
