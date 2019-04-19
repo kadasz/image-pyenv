@@ -16,7 +16,7 @@ RUN apt-get update; apt-get -y --no-install-recommends install python3-distutils
 RUN curl https://bootstrap.pypa.io/get-pip.py | $APP_VERSION -
 RUN rm -f /usr/bin/python && ln -s /usr/bin/$APP_VERSION /usr/bin/python
 RUN rm -f /usr/bin/python3 && ln -s /usr/bin/$APP_VERSION /usr/bin/python3
-RUN pip3 install virtualenvwrapper
+RUN pip3 install ipython virtualenvwrapper
 
 RUN apt-get clean
 RUN rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
