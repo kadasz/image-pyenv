@@ -8,7 +8,7 @@ ENV APP_REV 3.7
 ENV APP_VERSION $APP$APP_REV
 
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update; apt-get -q -y --no-install-recommends install psmisc curl wget git less vim net-tools lsof iproute2 tzdata build-essential
+RUN apt-get update; apt-get -q -y --no-install-recommends install psmisc curl wget git less vim net-tools lsof iputils-ping iproute2 tzdata build-essential
 RUN echo "deb http://ppa.launchpad.net/deadsnakes/ppa/ubuntu bionic main" | tee -a /etc/apt/sources.list.d/fkrull-deadsnakes.list
 RUN echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" | tee -a /etc/apt/sources.list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv F23C5A6CF475977595C89F51BA6932366A755776
